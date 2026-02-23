@@ -1,625 +1,1597 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="VastuDristhi offers expert online Vastu Shastra consulting to harmonize your home and workplace. Discover ancient wisdom for modern living.">
+    <meta name="keywords"
+        content="Vastu Shastra, Online Vastu Consulting, Home Vastu, Office Vastu, Vastu Tips, Vastu Consultant">
+    <title>VastuDristhi | Harmonize Your Space with Expert Vastu Consulting</title>
 
-  <!-- Primary SEO -->
-  <title>AI Vastu Analysis Online Free | VastuDrishti – Instant Floor Plan Vastu Checker with Remedies</title>
-  <meta name="description" content="Free AI vastu analysis online for floor plans. Get instant Go/OK/No-Go rating, ₹51 detailed dosha report, ₹101 full vastu remedies & pariharam. Fast WhatsApp delivery – best alternative to expensive vastu consultants like AppliedVastu. Check vastu online now!">
-  <meta name="keywords" content="AI vastu analysis, free vastu check online, vastu floor plan analyzer, online vastu consultant, vastu remedies online, vastu shastra AI, instant vastu report, free vastu rating, vastu agent ai, vaastu ai alternative, vastu online free">
-  <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://vastudrishti.github.io/vastudrishti/" />
-  <link rel="icon" type="image/png" href="https://github.com/VastuDrishti/vastudrishti/blob/main/favicon-32x32.png?raw=true" />
-  <link rel="shortcut icon" href="https://github.com/VastuDrishti/vastudrishti/blob/main/favicon-32x32.png?raw=true" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="AI Vastu Analysis Online Free | VastuDrishti – Instant Floor Plan Checker" />
-  <meta property="og:description" content="Fast AI-powered vastu screening via WhatsApp. Free rating, ₹51 basic, ₹101 with remedies. Smart filter before traditional vastu experts – save time & money." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://vastudrishti.github.io/vastudrishti/" />
-  <meta property="og:image" content="https://github.com/VastuDrishti/vastudrishti/blob/main/VastuDristhi.png?raw=true" />
-  <meta property="og:site_name" content="VastuDrishti" />
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-YDXX60X8B5"></script>
-  <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <style>
+/* 
+  VastuDristhi - Global Styles
+  Theme extracted from Logo: Deep Blue (#1B4467) and Rust/Orange Accent (#C76034)
+*/
 
-  gtag('config', 'G-YDXX60X8B5');
-  </script>
+:root {
+    /* Color Palette */
+    --clr-primary: #1B4467;
+    /* Deep Blue from logo */
+    --clr-accent: #C76034;
+    /* Rust Orange from logo */
+    --clr-accent-light: #df7b51;
+    /* Lighter shade of accent for hover */
+    --clr-secondary: #E3A759;
+    /* Gold/Sand (derived from compass in logo) */
 
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Free AI Vastu Analysis Online | VastuDrishti" />
-  <meta name="twitter:description" content="Instant vastu floor plan checker – free Go/No-Go, detailed reports from ₹51. WhatsApp-based, no app needed." />
-  <meta name="twitter:image" content="https://github.com/VastuDrishti/vastudrishti/blob/main/VastuDristhi.png?raw=true" />
+    --clr-text-main: #333333;
+    --clr-text-light: #666666;
 
-  <style>
-    :root {
-      --bg: #FFFFFF;
-      --text: #111111;
-      --text-sec: #333333;
-      --text-mute: #666666;
-      --accent: #1A1A1A;
-      --btn-bg: #1A1A1A;
-      --btn-text: #FFFFFF;
-      --btn-hover: #333333;
-      --card-bg: #F8F8F8;
-      --border: #E0E0E0;
-      --nav-bg: rgba(255, 255, 255, 0.92);
-      --shadow: 0 4px 20px rgba(0,0,0,0.08);
-      --modal-bg: rgba(0,0,0,0.6);
-      --gold: #C9973A;
-    }
-    * { margin:0; padding:0; box-sizing:border-box; }
-    body { background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif; line-height:1.6; }
-    .container { max-width:1024px; width:87.5%; margin:0 auto; padding:0 20px; }
+    --clr-bg-main: #FAFAFA;
+    --clr-bg-light: #F2F5F8;
+    /* Subtle blue-tinted white */
+    --clr-white: #FFFFFF;
 
-    /* ── NAV ── */
-    nav {
-      position:fixed; top:0; left:0; right:0; height:68px;
-      background:var(--nav-bg); backdrop-filter:blur(12px);
-      z-index:1000; display:flex; align-items:center; box-shadow:var(--shadow);
-    }
-    nav .logo img {
-      height:48px;
-      width:auto;
-      object-fit:contain;
-      display:block;
-    }
-    nav .menu { margin-left:auto; display:flex; gap:36px; align-items:center; }
-    nav a { color:var(--text-sec); font-size:14px; font-weight:600; text-decoration:none; transition:color .3s; }
-    nav a:hover { color:var(--accent); }
-    nav a.nav-wa {
-      background:#25D366;
-      color:#fff;
-      padding:8px 18px;
-      border-radius:999px;
-      display:flex;
-      align-items:center;
-      gap:7px;
-      font-size:13px;
-    }
-    nav a.nav-wa:hover { background:#1ebe5a; }
+    /* Typography */
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
 
-    /* ── HERO ── */
-    .hero { padding:148px 20px 100px; text-align:center; position:relative; overflow:hidden; }
-    .hero-mandala {
-      position:absolute;
-      top:50%;
-      left:50%;
-      transform:translate(-50%,-54%);
-      width:min(680px, 90vw);
-      height:auto;
-      opacity:0.045;
-      pointer-events:none;
-      z-index:0;
-    }
-    .hero > .container { position:relative; z-index:1; }
-    .hero h1 { font-size:clamp(44px,7.5vw,70px); font-weight:800; line-height:1.05; margin-bottom:28px; color:var(--accent); }
-    .tagline { font-size:clamp(19px,3.8vw,25px); font-weight:600; color:var(--text-sec); margin-bottom:36px; }
-    .founder-story { font-size:18px; color:var(--text-mute); max-width:720px; margin:0 auto 48px; }
-    .cta-primary {
-      display:inline-flex; align-items:center; gap:10px;
-      background:var(--btn-bg); border-radius:999px;
-      padding:0 40px; height:64px; font-size:18px; font-weight:600;
-      color:var(--btn-text); text-decoration:none; transition:all .3s; box-shadow:var(--shadow);
-    }
-    .cta-primary:hover { background:var(--btn-hover); transform:translateY(-3px); box-shadow:0 8px 32px rgba(0,0,0,0.15); }
-    .sub-pricing { margin-top:32px; font-size:17px; color:var(--text-mute); }
-    .hero-badge {
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      background:#F0FFF4;
-      border:1px solid #86EFAC;
-      border-radius:999px;
-      padding:6px 18px;
-      font-size:14px;
-      font-weight:600;
-      color:#166534;
-      margin-bottom:24px;
-    }
-    .badge-dot { width:8px; height:8px; background:#22C55E; border-radius:50%; animation:pulse 1.8s infinite; }
-    @keyframes pulse { 0%,100%{opacity:1} 50%{opacity:.4} }
+    /* Spacing & Layout */
+    --section-padding: 5rem 0;
+    --container-width: 1200px;
 
-    /* ── SECTIONS ── */
-    section { padding:120px 0; text-align:center; }
-    section.alt-bg { background:#FAFAFA; }
-    h2 { font-size:clamp(34px,5.5vw,50px); font-weight:800; margin-bottom:64px; color:var(--accent); }
+    /* Effects */
+    --shadow-sm: 0 4px 6px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 10px 30px rgba(0, 0, 0, 0.08);
+    --shadow-lg: 0 20px 40px rgba(27, 68, 103, 0.15);
+    --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    --border-radius: 8px;
+    --border-radius-lg: 16px;
+}
 
-    /* ── HOW IT WORKS ── */
-    .steps-grid {
-      display:grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap:28px;
-      max-width:1200px;
-      margin:0 auto;
-    }
-    @media (max-width: 1024px) { .steps-grid { grid-template-columns: repeat(2, 1fr); } }
-    @media (max-width: 640px)  { .steps-grid { grid-template-columns: 1fr; } }
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-    .step-card {
-      background:var(--card-bg);
-      border-radius:24px;
-      padding:36px 24px;
-      border:1px solid var(--border);
-      box-shadow:var(--shadow);
-      transition:transform .3s, box-shadow .3s;
-      display:flex;
-      flex-direction:column;
-      align-items:center;
-      text-align:center;
-    }
-    .step-card:hover { transform:translateY(-8px); box-shadow:0 12px 36px rgba(0,0,0,0.12); }
-    .step-icon {
-      width:64px; height:64px;
-      background:#fff;
-      border-radius:16px;
-      display:flex; align-items:center; justify-content:center;
-      margin-bottom:20px;
-      box-shadow:0 2px 12px rgba(0,0,0,0.07);
-      border:1px solid var(--border);
-    }
-    .step-icon svg { width:32px; height:32px; }
-    .step-number { font-size:13px; font-weight:700; color:var(--gold); letter-spacing:2px; text-transform:uppercase; margin-bottom:10px; }
-    .step-title { font-size:20px; font-weight:700; margin-bottom:10px; color:var(--accent); }
-    .step-desc { font-size:15px; color:var(--text-sec); line-height:1.65; }
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
 
-    /* ── PRICING ── */
-    .pricing-grid {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-      gap:36px;
-      margin-top:60px;
-    }
-    .price-card {
-      background:var(--card-bg);
-      border-radius:28px;
-      padding:44px 32px;
-      border:1px solid var(--border);
-      box-shadow:var(--shadow);
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-    }
-    .price-icon { margin-bottom:20px; }
-    .price-icon svg { width:40px; height:40px; }
-    .featured {
-      border-color:var(--accent);
-      background:#FFFFFF;
-      transform:scale(1.04);
-      box-shadow:0 8px 40px rgba(0,0,0,0.12);
-    }
-    .price-badge {
-      background:var(--accent); color:#fff;
-      font-size:11px; font-weight:700; letter-spacing:1.5px; text-transform:uppercase;
-      padding:4px 12px; border-radius:999px;
-      margin-bottom:16px; display:inline-block;
-    }
-    .price-title { font-size:26px; font-weight:700; margin-bottom:12px; color:var(--accent); }
-    .price-amount { font-size:60px; font-weight:800; margin-bottom:32px; color:var(--accent); line-height:1; }
-    .price-features { list-style:none; text-align:left; font-size:16px; color:var(--text-sec); margin-bottom:36px; width:100%; }
-    .price-features li { margin-bottom:14px; display:flex; align-items:flex-start; gap:10px; }
-    .price-features li::before { content:''; display:inline-block; width:18px; height:18px; min-width:18px; background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%2322C55E'%3E%3Cpath fill-rule='evenodd' d='M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z'/%3E%3C/svg%3E") center/contain no-repeat; margin-top:2px; }
-    .price-cta {
-      background:var(--btn-bg);
-      border-radius:999px;
-      padding:0 28px;
-      height:52px;
-      line-height:52px;
-      font-weight:600;
-      color:var(--btn-text);
-      text-decoration:none;
-      display:inline-flex;
-      align-items:center;
-      gap:8px;
-      transition:all .3s;
-      font-size:15px;
-      margin-top:auto;
-    }
-    .price-cta:hover { background:var(--btn-hover); transform:translateY(-2px); }
+body {
+    font-family: var(--font-body);
+    color: var(--clr-text-main);
+    background-color: var(--clr-bg-main);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
 
-    /* ── FAQ ── */
-    .faq-container { max-width:820px; margin:0 auto; text-align:left; }
-    details { border-bottom:1px solid var(--border); padding:24px 0; }
-    summary { font-size:20px; font-weight:600; cursor:pointer; list-style:none; display:flex; justify-content:space-between; align-items:center; color:var(--accent); }
-    summary::-webkit-details-marker { display:none; }
-    .chevron::after { content:'›'; font-size:30px; transform:rotate(90deg); transition:transform .4s; color:var(--text-mute); display:inline-block; }
-    details[open] .chevron::after { transform:rotate(-90deg); }
-    details p { margin-top:18px; color:var(--text-sec); font-size:16px; line-height:1.7; }
+/* Typography Elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-heading);
+    color: var(--clr-primary);
+    line-height: 1.2;
+}
 
-    /* ── TRUST STRIP ── */
-    .trust-strip {
-      display:flex;
-      justify-content:center;
-      align-items:center;
-      flex-wrap:wrap;
-      gap:40px;
-      padding:48px 20px;
-      border-top:1px solid var(--border);
-      border-bottom:1px solid var(--border);
-      background:#FAFAFA;
-    }
-    .trust-item { display:flex; align-items:center; gap:10px; font-size:15px; font-weight:600; color:var(--text-sec); }
-    .trust-item svg { width:22px; height:22px; color:var(--gold); }
+a {
+    text-decoration: none;
+    color: var(--clr-text-main);
+    transition: var(--transition);
+}
 
-    /* ── FOOTER ── */
-    footer {
-      padding:80px 0 48px;
-      text-align:center;
-      color:var(--text-mute);
-      font-size:14px;
-      border-top:1px solid var(--border);
-    }
-    footer .footer-logo img { height:36px; width:auto; object-fit:contain; margin-bottom:24px; }
-    footer a { color:var(--text-mute); text-decoration:underline; transition:color .3s; }
-    footer a:hover { color:var(--accent); }
+ul {
+    list-style: none;
+}
 
-    /* ── MODAL ── */
-    .modal {
-      display:none; position:fixed; z-index:2000;
-      left:0; top:0; width:100%; height:100%;
-      overflow:auto; background-color:var(--modal-bg); padding-top:60px;
-    }
-    .modal-content {
-      background:#fff; margin:5% auto; padding:36px;
-      border:1px solid var(--border); width:90%; max-width:720px;
-      border-radius:20px; box-shadow:0 10px 60px rgba(0,0,0,0.2);
-    }
-    .close { color:var(--text-mute); float:right; font-size:36px; font-weight:bold; cursor:pointer; line-height:1; }
-    .close:hover { color:var(--accent); }
-    .modal-body h2 { font-size:28px; margin-bottom:28px; color:var(--accent); }
-    .modal-body h3 { font-size:20px; margin:28px 0 14px; color:var(--accent); }
-    .modal-body ul { list-style:disc; padding-left:22px; margin-bottom:20px; }
-    .modal-body li { margin-bottom:10px; font-size:15px; color:var(--text-sec); }
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 768px) {
-      .hero { padding:120px 20px 80px; }
-      nav .menu { gap:16px; font-size:13px; flex-wrap:wrap; }
-      .featured { transform:scale(1); }
-      .trust-strip { gap:24px; }
+/* Utility Classes */
+.container {
+    max-width: var(--container-width);
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+.section {
+    padding: var(--section-padding);
+}
+
+.bg-light {
+    background-color: var(--clr-bg-light);
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-white {
+    color: var(--clr-white) !important;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.8rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: var(--transition);
+    text-align: center;
+    border: 2px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+}
+
+.btn-primary:hover {
+    background-color: var(--clr-accent-light);
+    color: var(--clr-white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(199, 96, 52, 0.3);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: var(--clr-primary);
+    color: var(--clr-primary);
+    border-width: 2px;
+}
+
+.btn-secondary:hover {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    transform: translateY(-3px);
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+    color: var(--clr-white) !important;
+}
+
+.btn-whatsapp:hover {
+    background-color: #1DA851;
+    color: var(--clr-white);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.3);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.shadow {
+    box-shadow: var(--shadow-md);
+}
+
+.rounded-image {
+    border-radius: var(--border-radius-lg);
+}
+
+/* Header & Navigation */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    transition: var(--transition);
+}
+
+.header.scrolled {
+    box-shadow: var(--shadow-sm);
+    padding: 0.5rem 0;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    transition: var(--transition);
+}
+
+.header.scrolled .nav-container {
+    height: 70px;
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.nav-link {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--clr-primary);
+    position: relative;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0%;
+    height: 2px;
+    background-color: var(--clr-accent);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+    width: 100%;
+}
+
+.btn-nav {
+    background-color: var(--clr-primary);
+    color: var(--clr-white) !important;
+    padding: 0.6rem 1.5rem;
+    border-radius: 50px;
+    transition: var(--transition);
+}
+
+.btn-nav::after {
+    display: none;
+}
+
+.btn-nav:hover {
+    background-color: var(--clr-accent);
+    transform: translateY(-2px);
+}
+
+.hamburger {
+    display: none;
+    font-size: 1.5rem;
+    color: var(--clr-primary);
+    cursor: pointer;
+}
+
+/* Sections & Layout blocks */
+/* Hero Section */
+.hero {
+    padding-top: 120px;
+    background-color: var(--clr-bg-light);
+    position: relative;
+    overflow: hidden;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+}
+
+.badge {
+    display: inline-block;
+    padding: 0.4rem 1.2rem;
+    background-color: rgba(199, 96, 52, 0.1);
+    color: var(--clr-accent);
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: var(--clr-primary);
+}
+
+.hero-subtitle {
+    font-size: 1.1rem;
+    color: var(--clr-text-light);
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+.hero-cta {
+    display: flex;
+    gap: 1rem;
+}
+
+.float-animation {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
     }
-  </style>
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.hero-shape {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+}
+
+.hero-shape svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 100px;
+}
+
+.hero-shape .shape-fill {
+    fill: var(--clr-white);
+}
+
+/* About Section */
+.about {
+    background-color: var(--clr-white);
+}
+
+.about-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-image {
+    position: relative;
+}
+
+.experience-badge {
+    position: absolute;
+    bottom: -20px;
+    right: -20px;
+    background: var(--clr-primary);
+    color: var(--clr-white);
+    padding: 2rem;
+    border-radius: 50%;
+    width: 140px;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    border: 5px solid var(--clr-white);
+}
+
+.exp-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+}
+
+.exp-text {
+    font-size: 0.8rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 0.5rem;
+}
+
+.bg-green {
+    background: #25D366;
+    border-color: var(--clr-white);
+}
+
+.section-subtitle {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.section-title {
+    color: var(--clr-accent);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 0.5rem;
+}
+
+.section-text {
+    color: var(--clr-text-light);
+    margin-bottom: 1.5rem;
+}
+
+.flow-list li {
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    font-weight: 500;
+    background: var(--clr-bg-light);
+    padding: 1.5rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+}
+
+.flow-list li:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-sm);
+}
+
+.step-num {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: 700;
+    font-size: 1.2rem;
+    flex-shrink: 0;
+}
+
+.flow-list p {
+    color: var(--clr-text-light);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+    font-weight: 400;
+}
+
+/* Pricing Section */
+.pricing-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    align-items: start;
+}
+
+.pricing-card {
+    background-color: var(--clr-white);
+    padding: 3rem 2rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    position: relative;
+    border-top: 5px solid var(--clr-bg-main);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-top-color: var(--clr-primary);
+}
+
+.pricing-card.popular {
+    border-top-color: var(--clr-accent);
+    transform: scale(1.05);
+    box-shadow: var(--shadow-md);
+    z-index: 2;
+}
+
+.pricing-card.popular:hover {
+    transform: scale(1.05) translateY(-10px);
+}
+
+.popular-badge {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    background-color: var(--clr-accent);
+    color: var(--clr-white);
+    font-size: 0.8rem;
+    font-weight: 700;
+    padding: 0.3rem 1rem;
+    border-radius: 0 0 8px 8px;
+    text-transform: uppercase;
+}
+
+.pricing-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.price {
+    font-size: 3rem;
+    font-family: var(--font-heading);
+    color: var(--clr-primary);
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.pricing-desc {
+    color: var(--clr-text-light);
+    font-size: 0.95rem;
+    margin-bottom: 2rem;
+    min-height: 45px;
+}
+
+.pricing-features {
+    margin-bottom: 2.5rem;
+    flex-grow: 1;
+}
+
+.pricing-features li {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    color: var(--clr-text-main);
+    font-size: 0.95rem;
+}
+
+.pricing-features i {
+    color: #25D366;
+    margin-top: 4px;
+}
+
+.pricing-features i.text-muted {
+    color: #cbd5e1;
+}
+
+.pricing-card .btn {
+    margin-top: auto;
+}
+
+/* FAQ Section */
+.faq {
+    background-color: var(--clr-white);
+}
+
+.faq-list {
+    max-width: 800px;
+    margin: 3rem auto 0 auto;
+}
+
+.faq-item {
+    margin-bottom: 1.5rem;
+    background-color: var(--clr-bg-light);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    border-left: 4px solid transparent;
+}
+
+.faq-item:hover {
+    border-left-color: var(--clr-primary);
+    transform: translateX(5px);
+    box-shadow: var(--shadow-sm);
+}
+
+.faq-question {
+    font-family: var(--font-body);
+    font-size: 1.1rem;
+    color: var(--clr-primary);
+    margin-bottom: 0.8rem;
+    font-weight: 600;
+}
+
+.faq-answer {
+    color: var(--clr-text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* Terms List */
+.terms-list {
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.terms-list li {
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+.terms-list strong {
+    color: rgba(255, 255, 255, 0.8);
+    display: block;
+    margin-bottom: 0.2rem;
+}
+
+/* Tips */
+.tips {
+    background-color: var(--clr-white);
+}
+
+.full-width-image {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+/* Sample Report Section */
+.report-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.report-image img {
+    width: 100%;
+    height: auto;
+    border: 5px solid var(--clr-white);
+}
+
+@media (max-width: 992px) {
+    .report-container {
+        grid-template-columns: 1fr;
+    }
+
+    .report-image {
+        order: -1;
+    }
+}
+
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.testimonial-card {
+    background-color: var(--clr-bg-main);
+    padding: 2.5rem 2rem;
+    border-radius: var(--border-radius-lg);
+    border-top: 4px solid var(--clr-accent);
+    transition: var(--transition);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+}
+
+.stars {
+    color: #FFD700;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.review-text {
+    font-size: 1.05rem;
+    font-style: italic;
+    color: var(--clr-text-main);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.reviewer {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    padding-top: 1.5rem;
+}
+
+.reviewer-img {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--clr-primary);
+}
+
+.reviewer h4 {
+    color: var(--clr-primary);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.reviewer span {
+    font-size: 0.85rem;
+    color: var(--clr-text-light);
+}
+
+/* SEO Tips Grid Section */
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.tip-card {
+    background-color: var(--clr-white);
+    border-radius: var(--border-radius-lg);
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.tip-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.tip-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 3px solid var(--clr-accent);
+}
+
+.tip-content {
+    padding: 1.5rem;
+    flex-grow: 1;
+}
+
+.tip-content h3 {
+    color: var(--clr-primary);
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+}
+
+.tip-content p {
+    color: var(--clr-text-light);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+/* Contact Section */
+.contact {
+    background-color: var(--clr-primary);
+    color: var(--clr-white);
+    position: relative;
+}
+
+.contact::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('data:image/svg+xml,%3Csvg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"%3E%3Cg fill="none" fill-rule="evenodd"%3E%3Cg fill="%23ffffff" fill-opacity="0.05"%3E%3Cpath d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');
+    opacity: 0.5;
+}
+
+.contact-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    position: relative;
+    z-index: 2;
+}
+
+.contact-methods {
+    margin-top: 3rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.icon-box {
+    width: 50px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--clr-accent);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 1.2rem;
+}
+
+.contact-method h4 {
+    color: var(--clr-white);
+    font-family: var(--font-body);
+    font-size: 1rem;
+    margin-bottom: 0.2rem;
+}
+
+.contact-method p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+}
+
+.contact-form-wrapper {
+    background-color: var(--clr-white);
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    color: var(--clr-text-main);
+}
+
+.form-title {
+    margin-bottom: 2rem;
+    font-size: 1.8rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid #e1e1e1;
+    border-radius: var(--border-radius);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: var(--transition);
+    background-color: var(--clr-bg-main);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--clr-accent);
+    box-shadow: 0 0 0 3px rgba(199, 96, 52, 0.1);
+}
+
+/* Footer */
+.footer {
+    background-color: #0F2A43;
+    /* Darker Blue */
+    color: rgba(255, 255, 255, 0.7);
+    padding-top: 4rem;
+}
+
+.footer-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-logo {
+    display: inline-block;
+    margin-bottom: 1.5rem;
+    background: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.footer-text {
+    margin-bottom: 1.5rem;
+    max-width: 300px;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-links a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: var(--clr-white);
+    border-radius: 50%;
+    transition: var(--transition);
+}
+
+.social-links a:hover {
+    background-color: var(--clr-accent);
+    transform: translateY(-3px);
+}
+
+.footer-heading {
+    color: var(--clr-white);
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links li {
+    margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-links a:hover {
+    color: var(--clr-accent);
+    padding-left: 5px;
+}
+
+.footer-bottom {
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 1.5rem 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 992px) {
+    .hero-title {
+        font-size: 2.8rem;
+    }
+
+    .hero-container,
+    .about-container,
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .contact-info {
+        text-align: center;
+    }
+
+    .contact-method {
+        justify-content: center;
+        text-align: left;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        top: 70px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 70px);
+        background-color: var(--clr-white);
+        flex-direction: column;
+        align-items: center;
+        padding-top: 3rem;
+        transition: 0.4s ease-in-out;
+        box-shadow: var(--shadow-md);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .hero {
+        padding-top: 100px;
+    }
+
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .section-subtitle {
+        font-size: 2rem;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .footer-text {
+        margin: 0 auto 1.5rem auto;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+}
+    </style>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "VastuDristhi",
+      "image": "assets/logo.png",
+      "description": "Expert online Vastu Shastra consulting services.",
+      "url": "https://www.vastudristhi.com",
+      "priceRange": "$$"
+    }
+    </script>
 </head>
+
 <body>
 
-  <!-- ══════════════════════ NAVIGATION ══════════════════════ -->
-  <nav>
-    <div class="container" style="display:flex; align-items:center; justify-content:space-between;">
-      <div class="logo">
-        <a href="https://vastudrishti.github.io/vastudrishti/">
-          <img
-            src="https://github.com/VastuDrishti/vastudrishti/blob/main/VastuDristhi.png?raw=true"
-            alt="VastuDrishti – AI Vastu Analysis Online Free"
-          >
-        </a>
-      </div>
-      <div class="menu">
-        <a href="#how">How It Works</a>
-        <a href="#pricing">Pricing</a>
-        <a href="#faq">FAQ</a>
-        <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20detailed%20audit" class="nav-wa">
-          <!-- WhatsApp icon -->
-          <svg viewBox="0 0 24 24" fill="currentColor" width="16" height="16"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L0 24l6.335-1.524A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.76.903.937-3.656-.237-.374A9.818 9.818 0 1112 21.818z"/></svg>
-          WhatsApp
-        </a>
-      </div>
-    </div>
-  </nav>
+    <!-- Header & Navigation -->
+    <header class="header" id="header">
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <img src="assets/logo.png" alt="VastuDristhi Logo" width="180" height="auto"
+                    onerror="this.src='https://via.placeholder.com/180x60/ffffff/1B4467.png?text=VastuDristhi';">
+            </a>
 
-  <!-- ══════════════════════ HERO ══════════════════════ -->
-  <section class="hero">
-    <!-- Decorative mandala background -->
-    <svg class="hero-mandala" viewBox="0 0 500 500" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-      <g fill="none" stroke="#1A1A1A" stroke-width="1">
-        <circle cx="250" cy="250" r="240"/><circle cx="250" cy="250" r="200"/><circle cx="250" cy="250" r="160"/>
-        <circle cx="250" cy="250" r="120"/><circle cx="250" cy="250" r="80"/><circle cx="250" cy="250" r="40"/>
-        <line x1="250" y1="10" x2="250" y2="490"/><line x1="10" y1="250" x2="490" y2="250"/>
-        <line x1="80" y1="80" x2="420" y2="420"/><line x1="420" y1="80" x2="80" y2="420"/>
-        <line x1="165" y1="10" x2="335" y2="490"/><line x1="10" y1="165" x2="490" y2="335"/>
-        <line x1="335" y1="10" x2="165" y2="490"/><line x1="10" y1="335" x2="490" y2="165"/>
-        <polygon points="250,50 290,130 380,130 310,190 340,280 250,220 160,280 190,190 120,130 210,130" stroke-width=".8"/>
-        <polygon points="250,100 278,175 360,175 295,220 320,300 250,255 180,300 205,220 140,175 222,175" stroke-width=".6"/>
-        <!-- Cardinal direction markers -->
-        <text x="250" y="22" text-anchor="middle" font-size="14" fill="#1A1A1A" font-family="serif">N</text>
-        <text x="250" y="486" text-anchor="middle" font-size="14" fill="#1A1A1A" font-family="serif">S</text>
-        <text x="485" y="255" text-anchor="middle" font-size="14" fill="#1A1A1A" font-family="serif">E</text>
-        <text x="15" y="255" text-anchor="middle" font-size="14" fill="#1A1A1A" font-family="serif">W</text>
-      </g>
-    </svg>
+            <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#home" class="nav-link active">Home</a></li>
+                    <li class="nav-item"><a href="#how" class="nav-link">How It Works</a></li>
+                    <li class="nav-item"><a href="#pricing" class="nav-link">Pricing</a></li>
+                    <li class="nav-item"><a href="#faq" class="nav-link">FAQ</a></li>
+                    <li class="nav-item"><a href="https://wa.me/919791568772" target="_blank" rel="noopener noreferrer"
+                            class="nav-link btn-whatsapp"
+                            style="border-radius:50px; padding:0.6rem 1.5rem; color:white;"><i
+                                class="fab fa-whatsapp"></i> Chat Now</a></li>
+                </ul>
+            </nav>
 
-    <div class="container">
-      <div class="hero-badge">
-        <span class="badge-dot"></span>
-        Accepting new floor plans now
-      </div>
-      <h1>AI Vastu Analysis<br>Online — Free</h1>
-      <div class="tagline">Instant Floor Plan Checker with Remedies – Save Thousands</div>
-      <div class="founder-story">
-        Tired of builders claiming "100% Vastu compliant" while good consultants charge ₹2,000–₹20,000 per property?
-        I built this AI (trained on 100+ Vastu & Feng Shui books) to quickly narrow 9 options down to 2 — via WhatsApp in minutes.
-        It's a smart first filter, <strong>not a replacement</strong> for traditional experts.
-      </div>
-      <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20quick%20score" class="cta-primary">
-        <!-- WhatsApp icon -->
-        <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 00-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.122.554 4.118 1.528 5.855L0 24l6.335-1.524A11.956 11.956 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.818 9.818 0 01-5.027-1.383l-.36-.214-3.76.903.937-3.656-.237-.374A9.818 9.818 0 1112 21.818z"/></svg>
-        Start Free Vastu Rating
-      </a>
-      <div class="sub-pricing">Free Go/OK/No-Go &nbsp;•&nbsp; ₹51 Basic Report &nbsp;•&nbsp; ₹101 with Remedies</div>
-    </div>
-  </section>
+            <div class="hamburger" id="hamburger">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
 
-  <!-- ══════════════════════ TRUST STRIP ══════════════════════ -->
-  <div class="trust-strip">
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-      100+ Vastu & Feng Shui Books
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-      2–3 Hour Delivery
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
-      From ₹0 — No Hidden Fees
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
-      WhatsApp — No App Needed
-    </div>
-    <div class="trust-item">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
-      Made with care in Bangalore
-    </div>
-  </div>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="container hero-container">
+                <div class="hero-content">
+                    <span class="badge">AI Vastu Analysis Online — Free</span>
+                    <h1 class="hero-title">Instant Floor Plan Vastu Checker</h1>
+                    <p class="hero-subtitle">Fast AI-powered Vastu screening via WhatsApp. Find out if your shortlisted
+                        property is a Go or No-Go before hiring traditional consultants.</p>
+                    <div class="hero-cta">
+                        <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20quick%20score"
+                            class="btn btn-primary" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> Start Free Rating</a>
+                        <a href="#how" class="btn btn-secondary">How It Works</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="assets/vastu_hero_ai.png" alt="AI Vastu Analysis Floor Plan" loading="lazy"
+                        class="float-animation"
+                        onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                </div>
+            </div>
+            <div class="hero-shape">
+                <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                    <path
+                        d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                        class="shape-fill"></path>
+                </svg>
+            </div>
+        </section>
 
-  <!-- ══════════════════════ HOW IT WORKS ══════════════════════ -->
-  <section id="how">
-    <div class="container">
-      <h2>How It Works – Online Vastu Analysis in Minutes</h2>
-      <div class="steps-grid">
+        <!-- How It Works Section -->
+        <section class="about section" id="how">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="assets/house-model.png" alt="Upload your floor plan to WhatsApp" loading="lazy"
+                        class="rounded-image shadow"
+                        onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                    <div class="experience-badge bg-green">
+                        <span class="exp-number"><i class="fab fa-whatsapp"></i></span>
+                        <span class="exp-text">2-3 Hour<br>Delivery</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">Online Vastu Analysis in Minutes</h2>
+                    <h3 class="section-subtitle">How It Works</h3>
+                    <p class="section-text">Traditional Vastu consulting can be expensive and slow. Our AI-assisted tool
+                        acts as a perfect first filter, helping you shortlist properties quickly via WhatsApp.</p>
 
-        <!-- Step 1 -->
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="6" y="4" width="20" height="24" rx="3" stroke="#1A1A1A" stroke-width="1.8"/>
-              <line x1="10" y1="10" x2="22" y2="10" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="10" y1="14" x2="22" y2="14" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="10" y1="18" x2="16" y2="18" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round"/>
-              <!-- North arrow -->
-              <path d="M24 22 L26 19 L28 22" stroke="#C9973A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-              <line x1="26" y1="19" x2="26" y2="27" stroke="#C9973A" stroke-width="1.5" stroke-linecap="round"/>
-              <text x="24.5" y="18.5" font-size="5" fill="#C9973A" font-family="serif">N</text>
-            </svg>
-          </div>
-          <div class="step-number">STEP 01</div>
-          <div class="step-title">Upload Floor Plan</div>
-          <div class="step-desc">Send your property floor plan (with directions/North arrow) via WhatsApp. Any clear image or PDF works.</div>
+                    <ul class="benefits-list flow-list">
+                        <li>
+                            <div class="step-num">1</div>
+                            <div>
+                                <strong>Upload Floor Plan</strong>
+                                <p>Send us a clear photo or PDF of your floor plan indicating the North direction via
+                                    WhatsApp.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-num">2</div>
+                            <div>
+                                <strong>AI + Expert Filtering</strong>
+                                <p>Our proprietary model, trained on traditional Vastu texts, scans 16 directions and 32
+                                    entrances.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-num">3</div>
+                            <div>
+                                <strong>Receive Your Report</strong>
+                                <p>Get your detailed dosha analysis and practical remedies delivered directly to your
+                                    phone.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sample Report Section -->
+        <section class="sample-report section bg-light" id="sample">
+            <div class="container report-container">
+                <div class="report-content">
+                    <h2 class="section-title">See Inside Your Report</h2>
+                    <h3 class="section-subtitle">What You Get in the ₹101 Detailed Audit</h3>
+                    <p class="section-text">We don't just give you a generic score. Our AI model, verified by experts,
+                        marks up your exact floor plan with a heatmap of doshas and directional strengths.</p>
+
+                    <ul class="benefits-list flow-list">
+                        <li>
+                            <div class="step-num"><i class="fas fa-compass"></i></div>
+                            <div>
+                                <strong>16 Direction Grid Overlay</strong>
+                                <p>We map the precise 16 Vastu zones (MahaVastu zones) onto your layout.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-num"><i class="fas fa-door-open"></i></div>
+                            <div>
+                                <strong>32 Entrance Evaluation</strong>
+                                <p>Discover if your main door falls in a positive (e.g., N3, N4, E3, E4) or negative
+                                    zone.</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="step-num"><i class="fas fa-yin-yang"></i></div>
+                            <div>
+                                <strong>Pariharam (Remedies)</strong>
+                                <p>Actionable, non-destructive fixes like color therapy and metal strips for your
+                                    specific doshas.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="report-image">
+                    <img src="assets/vastu_hero_ai.png"
+                        alt="Sample Vastu Analysis Heatmap overlay on a modern floor plan" loading="lazy"
+                        class="rounded-image shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- About Vastu Section -->
+        <section class="about section" id="about">
+            <div class="container about-container">
+                <div class="about-image">
+                    <img src="assets/house-model.png" alt="Modern home built with Vastu principles" loading="lazy"
+                        class="rounded-image shadow"
+                        onerror="this.src='https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80';">
+                    <div class="experience-badge">
+                        <span class="exp-number">15+</span>
+                        <span class="exp-text">Years of<br>Expertise</span>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2 class="section-title">The Science of Architecture</h2>
+                    <h3 class="section-subtitle">What is Vastu Shastra?</h3>
+                    <p class="section-text">Vastu Shastra is the ancient Indian science of architecture and spaces. It
+                        provides principles for design, layout, measurements, and ground preparation to harmonize human
+                        dwellings with natural forces.</p>
+                    <p class="section-text">By aligning elements—Earth, Water, Fire, Air, and Space—we eliminate
+                        negative energies and invite positivity, health, and wealth into your environment.</p>
+
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> Enhances physical and mental well-being</li>
+                        <li><i class="fas fa-check-circle"></i> Attracts financial prosperity and career growth</li>
+                        <li><i class="fas fa-check-circle"></i> Improves relationships and family harmony</li>
+                        <li><i class="fas fa-check-circle"></i> Promotes peace and spiritual growth</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Pricing Section -->
+        <section class="services section bg-light" id="pricing">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Transparent Pricing</h2>
+                    <p class="section-subtitle">Affordable AI Vastu Check via WhatsApp</p>
+                </div>
+
+                <div class="pricing-grid">
+                    <!-- Tier 1 -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Free Rating</h3>
+                        <div class="price"><span>₹0</span></div>
+                        <p class="pricing-desc">The perfect first filter.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Instant Go/OK/No-Go verdict</li>
+                            <li><i class="fas fa-check"></i> Unlimited use</li>
+                            <li><i class="fas fa-times text-muted"></i> No detailed dosha report</li>
+                            <li><i class="fas fa-times text-muted"></i> No remedies included</li>
+                        </ul>
+                        <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20quick%20score"
+                            class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Start Free</a>
+                    </div>
+
+                    <!-- Tier 2 -->
+                    <div class="pricing-card">
+                        <h3 class="pricing-title">Basic Report</h3>
+                        <div class="price"><span>₹51</span></div>
+                        <p class="pricing-desc">Identify core structural issues.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Everything in Free</li>
+                            <li><i class="fas fa-check"></i> Detailed doshas & zone issues</li>
+                            <li><i class="fas fa-check"></i> 2–3 hour WhatsApp delivery</li>
+                            <li><i class="fas fa-times text-muted"></i> No remedies included</li>
+                        </ul>
+                        <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20Basic%20audit"
+                            class="btn btn-secondary btn-block" target="_blank" rel="noopener noreferrer">Get Basic
+                            Report</a>
+                    </div>
+
+                    <!-- Tier 3 -->
+                    <div class="pricing-card popular">
+                        <div class="popular-badge">Best Value</div>
+                        <h3 class="pricing-title">Detailed Audit</h3>
+                        <div class="price"><span>₹101</span></div>
+                        <p class="pricing-desc">Full breakdown & actionable fixes.</p>
+                        <ul class="pricing-features">
+                            <li><i class="fas fa-check"></i> Everything in Basic</li>
+                            <li><i class="fas fa-check"></i> Priority 2-hour delivery</li>
+                            <li><i class="fas fa-check"></i> Practical Pariharam (Remedies)</li>
+                            <li><i class="fas fa-check"></i> Know exactly what to fix</li>
+                        </ul>
+                        <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20detailed%20audit"
+                            class="btn btn-whatsapp btn-block" target="_blank" rel="noopener noreferrer"><i
+                                class="fab fa-whatsapp"></i> Unlock Remedies</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials section" id="reviews">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Success Stories</h2>
+                    <p class="section-subtitle">Trusted by hundreds of homeowners</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Review 1 -->
+                    <div class="testimonial-card shadow">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"I was about to pay ₹15,000 for a consultant to look at three apartments.
+                            VastuDristhi helped me filter out two bad ones instantly for just ₹101! Absolute lifesaver."
+                        </p>
+                        <div class="reviewer">
+                            <img src="assets/person1.jpg" alt="Priya S." width="50" height="50" class="reviewer-img">
+                            <div>
+                                <h4>Priya S.</h4>
+                                <span>Bangalore</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="testimonial-card shadow">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="review-text">"The detailed ₹101 report was astonishingly accurate. The suggested
+                            remedy for my South-West kitchen was simple to implement and didn't require any demolition."
+                        </p>
+                        <div class="reviewer">
+                            <img src="assets/person2.jpg" alt="Ravi P." width="50" height="50" class="reviewer-img">
+                            <div>
+                                <h4>Ravi P.</h4>
+                                <span>Mumbai</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="testimonial-card shadow">
+                        <div class="stars">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i
+                                class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <p class="review-text">"Super fast delivery via WhatsApp. Got my free rating in minutes,
+                            immediately upgraded to the detailed audit for the remedies. Highly recommend for house
+                            hunters."</p>
+                        <div class="reviewer">
+                            <img src="assets/person3.jpg" alt="Anil K." width="50" height="50" class="reviewer-img">
+                            <div>
+                                <h4>Anil K.</h4>
+                                <span>Delhi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SEO Vastu Tips Section -->
+        <section class="tips section bg-light" id="tips">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Vastu Rules Dictionary</h2>
+                    <p class="section-subtitle">Core principles for a harmonious home</p>
+                </div>
+
+                <div class="tips-grid">
+                    <!-- Tip 1 -->
+                    <div class="tip-card overflow-hidden shadow">
+                        <img src="assets/entrance-vastu.jpg" alt="Main Door Design for Vastu" class="tip-image">
+                        <div class="tip-content">
+                            <h3>Main Entrance Vastu</h3>
+                            <p>The main door is the archway to prosperity. It should ideally face North, East, or
+                                North-East. Avoid South-West entrances as they are associated with instability. Ensure
+                                the door is well-lit and larger than other doors in the house.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 2 -->
+                    <div class="tip-card overflow-hidden shadow">
+                        <img src="assets/kitchen-vastu.jpg" alt="Modern Kitchen Vastu Layout" class="tip-image">
+                        <div class="tip-content">
+                            <h3>Kitchen Layout Rules</h3>
+                            <p>Fire rules the South-East corner (Agneya). This is the absolute best placement for a
+                                kitchen. The cook should face East while preparing meals. Never place the kitchen
+                                directly under or above a pooja room or bathroom.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 3 -->
+                    <div class="tip-card overflow-hidden shadow">
+                        <img src="assets/bedroom-vastu.jpg" alt="Master Bedroom Vastu Direction" class="tip-image">
+                        <div class="tip-content">
+                            <h3>Master Bedroom Direction</h3>
+                            <p>The Earth element dominates the South-West, bringing grounding and stability. The master
+                                bedroom must be located here. Sleep with your head pointing South or East for deep,
+                                restorative sleep. Avoid mirrors facing the bed.</p>
+                        </div>
+                    </div>
+
+                    <!-- Tip 4 -->
+                    <div class="tip-card overflow-hidden shadow">
+                        <img src="assets/pooja-room-vastu.jpg" alt="Pooja Room Vastu Setup" class="tip-image">
+                        <div class="tip-content">
+                            <h3>Pooja Room Guidelines</h3>
+                            <p>Jupiter rules the North-East (Ishan corner), making it the spiritual center of the home.
+                                Place your Pooja room here. Ensure the space remains clutter-free to allow divine
+                                energies to circulate. Face East or North while praying.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="faq section" id="faq">
+            <div class="container faq-container">
+                <div class="section-header text-center">
+                    <h2 class="section-title">Frequently Asked Questions</h2>
+                    <p class="section-subtitle">Everything about AI Vastu Online</p>
+                </div>
+
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <h4 class="faq-question">Is this a full substitute for a Vastu consultant?</h4>
+                        <p class="faq-answer">No. It's designed as a fast, low-cost pre-filter to help you shortlist
+                            properties intelligently — so you only spend on expert visits for your top 1–2 choices.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">How accurate is the AI screening?</h4>
+                        <p class="faq-answer">The AI is trained on over 100 authentic Vastu and Feng Shui books. It
+                            reliably helps reduce options. Use it for screening; always verify finalists with a
+                            qualified consultant.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">What do I need to send?</h4>
+                        <p class="faq-answer">Any clear photo, screenshot or PDF of the floor plan showing directions
+                            (North arrow preferred). WhatsApp supports most common formats.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Why is it so much cheaper than traditional consulting?</h4>
+                        <p class="faq-answer">AI automation + WhatsApp delivery removes high overhead. Traditional
+                            consultants charge ₹2,000–₹20,000 because they are manual and time-intensive.</p>
+                    </div>
+                    <div class="faq-item">
+                        <h4 class="faq-question">Can I use the free rating multiple times?</h4>
+                        <p class="faq-answer">Yes — the free rating is unlimited. Paid tiers are per analysis, making it
+                            ideal for comparing several apartments or houses.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <a href="#" class="logo footer-logo">
+                    <img src="assets/logo.png" alt="VastuDristhi Logo" width="150" height="auto"
+                        onerror="this.src='https://via.placeholder.com/150x50/ffffff/1B4467.png?text=VastuDristhi';">
+                </a>
+                <p class="footer-text">VastuDristhi – AI Vastu Analysis & Online Floor Plan Checker. Not a substitute
+                    for professional Vastu consultation.</p>
+                <a href="https://wa.me/919791568772" class="btn btn-whatsapp inline-block mt-2" target="_blank"
+                    rel="noopener noreferrer"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+            </div>
+
+            <div class="footer-col">
+                <h4 class="footer-heading">Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="#how">How It Works</a></li>
+                    <li><a href="#pricing">Pricing</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#tips">Tips & Articles</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-col" id="legal">
+                <h4 class="footer-heading">Terms & Legal Disclaimer</h4>
+                <ul class="footer-links terms-list">
+                    <li><strong>1. Nature of Service:</strong> Preliminary screening tool. Not a substitute for an
+                        in-person Vastu consultation.</li>
+                    <li><strong>2. Non-Guarantee:</strong> Does not guarantee financial gain or health improvements. We
+                        are not liable for property transaction outcomes.</li>
+                    <li><strong>3. User's Duty:</strong> Accuracy depends entirely on the North-point provided by the
+                        user.</li>
+                    <li><strong>4. Refunds:</strong> All sales are final due to the digital nature of the service
+                        (₹51/₹101 reports). Fees are a "Dakshina" (service fee).</li>
+                </ul>
+            </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="4" y="8" width="24" height="16" rx="3" stroke="#1A1A1A" stroke-width="1.8"/>
-              <path d="M4 13h24" stroke="#1A1A1A" stroke-width="1.8"/>
-              <circle cx="10" cy="19" r="2" fill="#C9973A"/>
-              <text x="15.5" y="21.5" font-size="8" font-weight="700" fill="#1A1A1A" font-family="sans-serif">₹</text>
-            </svg>
-          </div>
-          <div class="step-number">STEP 02</div>
-          <div class="step-title">Pay (if needed)</div>
-          <div class="step-desc">Free for basic rating. ₹51 for detailed issues. ₹101 for full report + practical remedies. Pay instantly via UPI.</div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 VastuDristhi. Made with care in Bangalore.</p>
+            </div>
         </div>
+    </footer>
 
-        <!-- Step 3 -->
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Chat bubble -->
-              <path d="M5 6h22a2 2 0 012 2v12a2 2 0 01-2 2H9l-5 4V8a2 2 0 012-2z" stroke="#1A1A1A" stroke-width="1.8" stroke-linejoin="round"/>
-              <!-- Checkmarks representing report -->
-              <line x1="11" y1="12" x2="21" y2="12" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round"/>
-              <line x1="11" y1="16" x2="17" y2="16" stroke="#22C55E" stroke-width="1.8" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="step-number">STEP 03</div>
-          <div class="step-title">Receive Analysis</div>
-          <div class="step-desc">Get your personalized AI report in 2–3 hours directly in WhatsApp — clear rating, issues, and (premium) remedies.</div>
-        </div>
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // DOM Elements
+    const header = document.getElementById('header');
+    const hamburger = document.getElementById('hamburger');
+    const navMenu = document.getElementById('nav-menu');
+    const navLinks = document.querySelectorAll('.nav-link');
+    const contactForm = document.getElementById('contactForm');
 
-        <!-- Step 4 -->
-        <div class="step-card">
-          <div class="step-icon">
-            <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- House -->
-              <path d="M5 14L16 5l11 9" stroke="#1A1A1A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-              <rect x="9" y="14" width="14" height="12" rx="1" stroke="#1A1A1A" stroke-width="1.8"/>
-              <!-- Checkmark -->
-              <circle cx="23" cy="9" r="5" fill="#22C55E"/>
-              <path d="M20.5 9l1.8 1.8 3-3" stroke="#fff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="step-number">STEP 04</div>
-          <div class="step-title">Shortlist & Decide</div>
-          <div class="step-desc">Narrow your options confidently — only take finalists to a traditional Vastu expert for final confirmation.</div>
-        </div>
+    // Sticky Header
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 50) {
+            header.classList.add('scrolled');
+        } else {
+            header.classList.remove('scrolled');
+        }
+        
+        // Active Link highlighting based on scroll position
+        let current = '';
+        const sections = document.querySelectorAll('section');
+        
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= (sectionTop - 150)) {
+                current = section.getAttribute('id');
+            }
+        });
 
-      </div>
-    </div>
-  </section>
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            // Check if the link href includes the current section id
+            if (link.getAttribute('href').includes(current)) {
+                link.classList.add('active');
+            }
+        });
+    });
 
-  <!-- ══════════════════════ PRICING ══════════════════════ -->
-  <section id="pricing" class="alt-bg">
-    <div class="container">
-      <h2>Transparent Pricing – Affordable AI Vastu Check</h2>
-      <div class="pricing-grid">
+    // Hamburger Menu Toggle
+    hamburger.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+        // Toggle icon between bars and times (close)
+        const icon = hamburger.querySelector('i');
+        if (navMenu.classList.contains('active')) {
+            icon.classList.remove('fa-bars');
+            icon.classList.add('fa-times');
+        } else {
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        }
+    });
 
-        <!-- Free -->
-        <div class="price-card">
-          <div class="price-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <circle cx="20" cy="20" r="18" stroke="#E0E0E0" stroke-width="2"/>
-              <path d="M13 20l5 5 9-10" stroke="#22C55E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="price-title">Free Rating</div>
-          <div class="price-amount">₹0</div>
-          <ul class="price-features">
-            <li>Instant Go / OK / No-Go verdict</li>
-            <li>Unlimited use — no signup</li>
-            <li>Perfect first filter</li>
-          </ul>
-          <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20quick%20score" class="price-cta">
-            Start Free
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
+    // Close mobile menu when a nav link is clicked
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navMenu.classList.remove('active');
+            const icon = hamburger.querySelector('i');
+            icon.classList.remove('fa-times');
+            icon.classList.add('fa-bars');
+        });
+    });
 
-        <!-- Basic -->
-        <div class="price-card">
-          <div class="price-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect x="8" y="6" width="24" height="28" rx="3" stroke="#E0E0E0" stroke-width="2"/>
-              <line x1="13" y1="14" x2="27" y2="14" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/>
-              <line x1="13" y1="19" x2="27" y2="19" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/>
-              <line x1="13" y1="24" x2="21" y2="24" stroke="#C9973A" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-          </div>
-          <div class="price-title">Basic Analysis</div>
-          <div class="price-amount">₹51</div>
-          <ul class="price-features">
-            <li>Detailed doshas & zone issues</li>
-            <li>2–3 hour WhatsApp delivery</li>
-            <li>Know exactly what to fix</li>
-          </ul>
-          <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20Basic%20audit" class="price-cta">
-            Get Basic Report
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-
-        <!-- Premium -->
-        <div class="price-card featured">
-          <div class="price-badge">Best Value</div>
-          <div class="price-icon">
-            <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M20 4l3.5 8.5L32 14l-6.5 6 1.5 9L20 25l-7 4 1.5-9L8 14l8.5-1.5L20 4z" stroke="#C9973A" stroke-width="2" stroke-linejoin="round"/>
-            </svg>
-          </div>
-          <div class="price-title">Premium + Remedies</div>
-          <div class="price-amount">₹101</div>
-          <ul class="price-features">
-            <li>Full report + practical pariharam</li>
-            <li>Actionable Vastu corrections</li>
-            <li>Best value for shortlisted homes</li>
-          </ul>
-          <a href="https://wa.me/919791568772?text=I%20would%20like%20a%20detailed%20audit" class="price-cta">
-            Unlock Remedies
-            <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ FAQ ══════════════════════ -->
-  <section id="faq">
-    <div class="container">
-      <h2>Frequently Asked Questions – AI Vastu Online</h2>
-      <div class="faq-container">
-        <details>
-          <summary>Is this a replacement for traditional Vastu consultants?<span class="chevron"></span></summary>
-          <p>No. It's designed as a fast, low-cost pre-filter to help you shortlist properties intelligently — so you only spend on expert visits for your top 1–2 choices.</p>
-        </details>
-        <details>
-          <summary>How accurate is the AI analysis?<span class="chevron"></span></summary>
-          <p>The AI is trained on over 100 authentic Vastu and Feng Shui books. It personally helped me reduce 9 options to 2 reliably. Use it for screening; always verify finalists with a qualified consultant.</p>
-        </details>
-        <details>
-          <summary>What file formats should I upload?<span class="chevron"></span></summary>
-          <p>Any clear photo, screenshot or PDF of the floor plan showing directions (North arrow preferred). WhatsApp supports most common formats.</p>
-        </details>
-        <details>
-          <summary>Why is it so much cheaper than others?<span class="chevron"></span></summary>
-          <p>AI automation + WhatsApp delivery removes high overhead. Traditional consultants charge ₹2,000–₹20,000 because they are manual and time-intensive.</p>
-        </details>
-        <details>
-          <summary>Can I analyze multiple properties?<span class="chevron"></span></summary>
-          <p>Yes — the free rating is unlimited. Paid tiers are per analysis, making it ideal for comparing several apartments or houses.</p>
-        </details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ══════════════════════ FOOTER ══════════════════════ -->
-  <footer>
-    <div class="container">
-      <div class="footer-logo">
-        <img
-          src="https://github.com/VastuDrishti/vastudrishti/blob/main/VastuDristhi.png?raw=true"
-          alt="VastuDrishti logo"
-        >
-      </div>
-      <p>© 2026 VastuDrishti – AI Vastu Analysis &amp; Online Floor Plan Checker<br>Not a substitute for professional Vastu consultation &nbsp;•&nbsp; Made with care in Bangalore</p>
-      <p style="margin-top:14px;">
-        <a href="#" id="termsLink">Terms of Service &amp; Legal Disclaimer</a>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="https://wa.me/919791568772" target="_blank" rel="noopener">WhatsApp Us</a>
-        &nbsp;&nbsp;|&nbsp;&nbsp;
-        <a href="https://vastudrishti.github.io/vastudrishti/" target="_blank" rel="noopener">vastudrishti.github.io</a>
-      </p>
-    </div>
-  </footer>
-
-  <!-- ══════════════════════ MODAL – Terms ══════════════════════ -->
-  <div id="termsModal" class="modal">
-    <div class="modal-content">
-      <span class="close" id="closeModal">&times;</span>
-      <div class="modal-body">
-        <h2>Terms of Service &amp; Legal Disclaimer</h2>
-        <h3>1. Nature of Service</h3>
-        <ul>
-          <li><strong>The "Filter" Concept:</strong> You explicitly acknowledge that VastuDrishti is a preliminary screening tool designed to narrow down property choices. It is a "First-Pass Audit" and not a substitute for a full, in-person Vastu consultation.</li>
-          <li><strong>AI-Assisted Analysis:</strong> Our reports are generated using proprietary computational models trained on traditional Vastu texts. While we strive for accuracy, digital analysis of floor plans is subject to the quality of the image provided by the user.</li>
-        </ul>
-        <h3>2. Non-Guarantee of Results</h3>
-        <ul>
-          <li><strong>No Outcomes Promised:</strong> Vastu is a traditional Vedic science based on energy alignments. VastuDrishti does not guarantee financial gain, health improvements, or "good luck."</li>
-          <li><strong>Investment Decisions:</strong> The final decision to purchase, lease, or renovate a property rests solely with the user. VastuDrishti is not liable for any financial losses arising from property transactions.</li>
-        </ul>
-        <h3>3. Accuracy of Data (The "User's Duty")</h3>
-        <ul>
-          <li><strong>Directional Accuracy:</strong> The accuracy of the report depends entirely on the North-point/Compass-degree provided by the user. If the user provides an incorrect orientation, the resulting analysis will be invalid.</li>
-          <li><strong>Floor Plan Clarity:</strong> We reserve the right to request a clearer image. If the plan is illegible, the delivery window may be extended.</li>
-        </ul>
-        <h3>4. Refund &amp; Payment Policy</h3>
-        <ul>
-          <li><strong>Digital Goods:</strong> Due to the digital and near-instant nature of the service (₹51/₹101 reports), all sales are final. No refunds will be issued once the analysis process has begun.</li>
-          <li><strong>Auspicious Pricing:</strong> The fee is a "Dakshina" (service fee) for the computational analysis provided.</li>
-        </ul>
-        <h3>5. Privacy &amp; Data Use</h3>
-        <ul>
-          <li><strong>Data Storage:</strong> We do not sell your floor plans to third parties. However, we may use anonymized versions of floor plans (with personal details like name/address blurred) for educational or marketing purposes on social media.</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <script>
-    const modal = document.getElementById("termsModal");
-    const termsLink = document.getElementById("termsLink");
-    const closeModalBtn = document.getElementById("closeModal");
-    termsLink.onclick = function(e) { e.preventDefault(); modal.style.display = "block"; }
-    closeModalBtn.onclick = function() { modal.style.display = "none"; }
-    window.onclick = function(event) { if (event.target == modal) modal.style.display = "none"; }
-  </script>
+    // Form Submission Handler
+    if (contactForm) {
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Simple validation simulation
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const originalText = btn.textContent;
+            
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+            
+            // Simulate API call
+            setTimeout(() => {
+                alert('Thank you for your request! The VastuDristhi team will contact you shortly.');
+                contactForm.reset();
+                btn.textContent = originalText;
+                btn.disabled = false;
+            }, 1500);
+        });
+    }
+});
+    </script>
 </body>
+
 </html>
